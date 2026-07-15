@@ -12,6 +12,7 @@ public class ZigZagTraversal {
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
+        // instead we can use Deque so that can poll based on direction flag
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
         boolean leftToRight = true;
