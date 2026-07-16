@@ -12,8 +12,10 @@ public class NumberOfIslands {
     }
     public static void dTrav(char[][] mat, int row, int col){
         int rSize = mat.length, cSize = mat[0].length;
-        if(row<0||col<0||row>=rSize||col>=cSize||mat[row][col]=='0') return;
-        mat[row][col]='0';dTrav(mat, row-1, col);dTrav(mat, row+1, col);
+        if(row<0||col<0||row>=rSize||
+            col>=cSize||mat[row][col]=='0') return;
+        mat[row][col]='0';dTrav(mat, row-1, col);
+        dTrav(mat, row+1, col);
         dTrav(mat, row, col-1);dTrav(mat, row, col+1);
     }
     public static void main(String[] args) {
