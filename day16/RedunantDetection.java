@@ -2,7 +2,6 @@ package day16;
 
 import java.util.Arrays;
 
-
 public class RedunantDetection {
     public static int[] findRedundantConnection(int[][] edges) {
         int n = edges.length;
