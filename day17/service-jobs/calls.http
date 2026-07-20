@@ -1,0 +1,28 @@
+@url = http://localhost:1234
+
+post {{url}}/service
+Content-Type: application/json
+
+{
+    "customerName":"Hari",
+    "contact":45676545676,
+    "vehicle":"TN52W8912",
+    "engineer":"Praveen",
+    "complaints":"Oil leakage, Clutch plate",
+    "tentativeBill":10800.4
+}
+###
+get {{url}}/service
+###
+patch {{url}}/service/1
+Content-Type: application/json
+
+{
+    "status":"Delivered",
+    "actualBill":3000.5,
+    "complaints":"Chain Sporket"
+}
+###
+DELETE {{url}}/service/1
+###
+get {{url}}/service/filter/TN52W8912
